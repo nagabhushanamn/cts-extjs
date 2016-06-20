@@ -1,0 +1,46 @@
+
+
+
+ when initial JS loaded into browser , JS-engine
+ 
+  creates 'Global Execution Context'
+  
+  
+  			window === this === global-execution-context
+  			  
+           ---------------------------------------------
+           |
+           |   all argument(s),local-var(s) 
+           |   and instruction(s) will exist to execute
+           |
+           |
+           |--------------------------------------------
+           
+           
+    ----------------------------------------------      
+    
+    Global-Execution Context
+    
+     2 phases
+     
+     -> creation-phase
+     
+       all variable/function declaration(s) are hoisted(lifting-up) to top of context
+       with default value( undefined )
+       
+       all global-variables will become property of global-obj.
+     
+     -> execution-phase
+     
+        
+     
+    --------------------------------------------- 
+    
+    
+    every function invocation  also create new-execution-context ( child of above )
+    
+    child-execution-context can inherit any property from above context
+    when property dosen't exist
+    
+    -------------------------------------------------
+    

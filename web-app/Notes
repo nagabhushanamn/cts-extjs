@@ -1,0 +1,35 @@
+
+
+
+Javascript is
+
+	-> single-threaded lang
+	-> we can do non-blocking IO
+	-> can implement better concurrency
+	-> can execute func asynch-ly
+	-> it has callback functions
+
+
+------------------------------------------
+
+
+How script executing in browser ?
+
+
+ e.g chrome-browser
+ 
+     a. JS-engine ( v8 )
+     
+         single-call-stack
+         heap
+         
+     b. web-APIs ( DOM , XHR . etc.. )
+     c. message/callback queue
+     d. Event-Loop
+     
+     --------------------------------------
+     
+     
+     
+     
+         

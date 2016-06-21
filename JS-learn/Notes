@@ -1,0 +1,223 @@
+
+
+ 
+
+
+  what is JS ?
+
+  -> scripting lang for web-pages in browser-envi
+  +
+  -> server-side lang on NodeJS
+  -> stand-alone appln
+  -> mobile appln.
+
+  JS features
+  ------------
+
+  -> functional programming lang
+  -> object oriented lang
+
+  -> datatypes are dynamic
+  -> its supports 'closure'
+
+  -> single-threaded lang.
+
+     provide better concurreny
+     can execute func async
+       
+  -------------------------------   
+
+
+  JS lang is based on 'ECMAScript spec' 
+
+  latest release : ES-6
+
+
+  how to execute JS programs?
+
+  we need 'JS-engine'
+
+  all browser have own 'JS engine'
+
+  e.g
+  
+  browser:
+
+  chrome  --> v8 ( c++ )
+  firefox --> rhino ( java )
+  IE      --> chakra
+  safari  --> nitro
+
+ non-browser
+
+  NodeJS --> v8
+  JVM    --> rhino , nashorn
+  Apache CouchDB
+  MongoDB
+
+
+  all JS engines are based on 'ECMAScript' spec
+
+  ---------------------------------
+
+  Javascript
+
+     --> Execution Context - scope chains
+     --> 'this' keyword
+     --> closure(s)
+     --> Inheritence
+     --> How JS execute in browser-envi 
+
+         concurrency
+         callbacks
+         async
+
+ ---------------------------------------
+
+ NPM config
+
+ npm config set proxy http://proxy.cognizant.com:6050
+ npm config set strict--ssl false 
+ 
+ ----------------------------------------
+
+
+ when initial JS loaded into browser , JS-engine
+ 
+  creates 'Global Execution Context'
+  
+  
+  			window === this === global-execution-context
+  			  
+           ---------------------------------------------
+           |
+           |   all argument(s),local-var(s) 
+           |   and instruction(s) will exist to execute
+           |
+           |
+           |--------------------------------------------
+           
+           
+    ----------------------------------------------      
+    
+    Global-Execution Context
+    
+     2 phases
+     
+     -> creation-phase
+     
+       all variable/function declaration(s) are hoisted(lifting-up) to top of context
+       with default value( undefined )
+       
+       all global-variables will become property of global-obj.
+     
+     -> execution-phase
+     
+        
+     
+    --------------------------------------------- 
+    
+    
+    every function invocation  also create new-execution-context ( child of above )
+    
+    child-execution-context can inherit any property from above context
+    when property dosen't exist
+    
+    -------------------------------------------------
+    
+    How to implement inheritance in JS ?
+    
+    
+     --> prototype based 
+     
+     
+    --------------------------------------
+    
+    
+    
+    
+    references
+    -----------
+    
+    1. MDN Javascript
+    2. Principles of OO JS ( book )
+    3. JS Good Parts - crockford ( book )
+    4. jstherightway.org
+    5. javascriptissexy.com
+    
+    
+    //---------------------------------------
+    
+    
+    
+    JS with HTML-pages
+    ------------------
+    
+    
+    
+    
+    what js can do on HTML-page ?
+    
+    JS using Web-APIs can bring any dynamic functionality to web-page
+    
+    what is Web API -> functionality implemented and abstracted by 'browser'
+    
+    e.g Web APIs
+    
+        DOM,XHR,Timer, etc...... 
+    
+     most web-apis are w3c standards
+     
+     Web APIs abstractions is JavaScript-objs
+     
+     
+    using DOM API
+    
+    --> can create/select/update/delete HTML elements
+    --> can change element's attrubute values
+    --> can change element's text content
+    --> can change element's styles using CSS
+    --> can validate form-fields
+    --> able to create rich UI-components ( markup+css+js )
+
+	using XHR API
+	
+    --> can communicate with server asych , update result in existing page ( AJAX )
+    
+    HTML-5 APIS
+    
+     a. canvas -
+     b. Audio/Video
+     c. storage API
+     d. geo
+     e. web worker
+     f. SSE
+     g. Web Sockets
+     h. WebGL    
+    
+    
+    -------------------------------------
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

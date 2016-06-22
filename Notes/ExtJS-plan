@@ -1,0 +1,124 @@
+
+
+
+  Learning Flow
+  --------------
+
+  1. Javascript
+
+     -> javascript-lang ( refresh on some important topics )
+
+  2. Ext-JS
+
+  level-1 : Getting to Know Ext JS
+
+        - What is Ext JS
+        - What Ext JS isn't
+        - Some Use cases
+
+           -> Trading Apps with real-time data
+           -> Ent data management apps
+           -> Intranet appln
+           -> visualization application
+           -> consumer-faing web-apps
+           -> Native-wrapped desktop-apps
+           -> Dashboard ad portals
+
+        - What you need to know   
+
+             HTML , CSS , SASS , JS , Web APIs basic , JSON
+
+        - Project introduction
+
+             dashboard appln
+
+        - Creating out application with sencha CMD
+
+
+
+        - Anatomy of our application
+        - How it works
+
+  level-2 : Mastering the Framework's Building Blocks
+
+        - Defining classes
+        - The magic behind Ext.Loader
+        - Adding Class members
+        - Extending classes
+        - Overriding classes
+        - Configuring classes
+
+  level-3 : Reacting to User and Application Interactions
+
+        - Defining event handlers
+        - Listener options
+        - Firing events
+        - Listening for events on elements
+        - Mouse and Kyboard events
+        - Touch events
+
+  level-4 : Architecting an Ext JS Application
+
+        - Getting the most from Sencha Cmd
+        - MVC and MVVM
+        - cross-class communication
+        - Taking application offline
+
+  level-5 : Modeling Data Structures for Your UI
+
+        - Defining models
+        - Working with stores
+        - Getting data into application
+        - Data associations
+        - Saving Data
+        - REST API
+
+  level-6 : Combining UI Widgets into the Perfect Layout
+
+        - Layouts and how they work
+        - Component layout
+        - Border layout
+        - Fit layout
+        - HBox and VBox layout
+        - Responsive layouts
+
+ level-7 : Constructing Common UI Widgets
+
+        - Anatomy of a widget
+        - The component life-cycle
+        - Component queries
+        - Hierarchical data with trees
+        - Displaying tabular data
+        - Inputting data with forms
+        - data-bound views
+
+  level-8 : Creating a Unique Look and Feel with SASS
+
+        - Applying themes to your application
+        - Creating a custom there
+        - Basic theme customizations
+        - Custom component UI
+
+  level-9 : Visualizing Your Application's Data
+
+        - chart components
+        - creating line chart
+        - Presenting data in a bar chart
+        - Integrating visualizations in grids
+
+  level-10 : Guaranteeing Your Code's Quality with Unit and UI Testing
+
+        - writing testable JavaScript
+        - Testing frameworks
+        - Writing unit tests
+        - Testing UI interaction
+        - Test automation and integration
+
+   
+   Ext 6.x
+
+   Tools
+   Debugging     
+   Best practices
+   Production release considerations
+

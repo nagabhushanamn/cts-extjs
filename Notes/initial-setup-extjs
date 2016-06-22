@@ -1,0 +1,26 @@
+
+----------------------------
+
+1. install latest Java
+2. install ruby
+3. install sencha CMD 5.x
+4. download and exract ExtJS SDK 5.x
+
+---------------------------
+using sencha CMD
+
+1. create workspace
+
+   SDK> sencha generate workspace /path/to/workspace
+
+2. create application   
+
+   SDK> sencha generate app AppName /your/workspace/AppName
+
+--------------------------------------------   
+
+launch Application on web-server and keep watch for changes
+
+  AppName> sencha app watch
+
+---------------------------------------------  

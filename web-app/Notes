@@ -27,7 +27,108 @@ How script executing in browser ?
      c. message/callback queue
      d. Event-Loop
      
-     --------------------------------------
+--------------------------------------
+     
+     
+     
+     
+     
+     
+     Front-end appln ==> HTML + CSS + ( JS + Web APIS )
+     
+     ----------------------------------------------------
+     
+     
+     
+     plain-js  ( code written by you )  complexities
+     
+     -> browser compatibility
+     -> too much code even for simple operations.
+     -> performance when doing DOM manipulation
+     -> memory leaks
+     
+     -> creating complex-UI components need much effort.
+     
+        form-controls
+        layout
+        grids
+        visual charts
+        
+      ---------------------------------------------------  
+      
+      soln : using JS libraries and F.Ws
+      
+      -----------------------------------------------------
+      
+      JS libraries
+      
+      -> jQuery
+      
+         adv:
+         
+         --> simple
+         --> DOM manipulation is easy
+         --> many plug-ins are available
+         
+         cons
+         
+         --> too low level with DOM
+         --> no data-binding support
+         --> no solns to organize JS code
+         --> plugins are not upto-date for UI comp.
+         
+         
+      -> knockout
+      
+      ---------------------------------------------------
+      
+      
+      JS F.Ws  ( MVC , MVVM )
+      
+      
+      -> Backbone
+      -> Angular
+      -> ReactJS
+      ....
+      
+      
+      -> DOJO
+      
+      
+      ---------------------------------------------------
+      
+      
+      ExtJS from sencha.
+      
+      ExtJS 5.x  --> ExtJS 6.x
+      
+      ---------------------------------------------------
+      
+      
+      
+      
+      
+      
+      
+      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
      
      
      

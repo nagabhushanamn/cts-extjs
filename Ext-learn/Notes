@@ -1,0 +1,30 @@
+
+
+ ExtJS class
+ -------------------
+ 
+   --> pre-processor
+   
+       ["className",
+        "loader", 
+        "extend", 
+        "privates",
+        "statics", 
+        "inheritableStatics",
+        "platformConfig",
+        "config", 
+        "cachedConfig",
+        "mixins",
+        "alias"]
+   
+   --> post-processor
+   
+       ["alias",
+        "singleton",
+        "alternateClassName",
+        "debugHooks",
+        "deprecated", 
+        "uses"]
+        
+        
+        --------------------------

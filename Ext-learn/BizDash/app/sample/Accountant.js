@@ -2,17 +2,14 @@
  * http://usejsdoc.org/
  */
 
-Ext.define('BizDash.sample.Accountant', {
-	extend : 'BizDash.sample.Employee',
+Ext.define('Myapp.sample.Accountant', {
+	extend : 'Myapp.sample.Employee',
+	mixins : {
+		attendClient : 'Myapp.sample.tasks.attendClient',
+		attendMeeting : 'Myapp.sample.tasks.attendMeeting'
+	},
 	constructor : function(config) {
 		Ext.apply(this, config || {});
-	},
-	mixins:{
-		attentClient:'BizDash.sample.tasks.attentClient',
-		attentMeeting:'BizDash.sample.tasks.attentMeeting'
-	},
-	supervise : function(employee) {
-		console.log(this.name +" is supervising the work of "+employee.name);
+		console.log('Accountant class created – fullname:' + this.name + ' '+ this.lastName);
 	}
-}, function() {
 });

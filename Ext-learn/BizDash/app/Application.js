@@ -4,6 +4,11 @@
  * details.
  */
 
+Ext.Loader.setConfig({
+	enabled:true,
+	Myapp:'./app'
+});
+
 
 Ext.define('BizDash.Application', {
     extend: 'Ext.app.Application',

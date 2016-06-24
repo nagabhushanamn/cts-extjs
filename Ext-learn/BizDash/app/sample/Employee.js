@@ -2,50 +2,42 @@
  * http://usejsdoc.org/
  */
 
-Ext.define('BizDash.sample.Employee', {
-	alternateClassName:'ctsEmployee',
-	alias:'widget.employee',  // xtype:'widget.employee'
+Ext.define('Myapp.sample.Employee', {
+	//	name : 'Unknown',
+	//	lastName : 'Unknown',
+	//	age : 0,
 	statics:{
-		instanceCount:0,
-		payrollId:1000,
-		nextId:function(){
-			return (this.payrollId+this.instanceCount);
-		}
+	       instanceCount: 0,
+	       payrollId: 1000,
+	       nextId : function(){
+	         return ( this.payrollId + this.instanceCount );
+	       }
 	},
-	inheritableStatics:{
-		compName:'CTS'
+	config:{
+	       name: 'Unknown',
+	       lastName: 'Unknown',
+	       age: 0,
+	       isOld: false,
+	       payrollNumber: 0
 	},
-	config : {
-		name : 'Unknown',
-		lastName : 'Unknown',
-		age : 0,
-		payrollNumber:0
-	},
-	applyName : function(newName,oldName) {
-		console.log('applying name');
-		console.log(newName);
-		if (!newName) {
-			return oldName;
-		} else {
-			return newName;
-		}
-	},
-	updateName:function(){
-		console.log('updating name..');
-		// by emiiting custom event...
-	},
+	applyAge: function(newAge,oldAge) {
+	       this.setIsOld ( ( newAge >= 90 ) );
+	       return newAge;
+	 },
+	updateAge:function(newAge,oldAge){
+		 //
+	 },
 	constructor : function(config) {
-		console.log('Employee constructor invoked...');
-		// Ext.apply(this, config||{});
-		this.initConfig(config);
-		this.self.instanceCount++;
-		this.setPayrollNumber(this.statics().nextId());
+		//Ext.apply(this, config || {});
+		//console.log('class created – fullname:' + this.name + ' '+ this.lastName);
+		this.initConfig( config );
+		this.setPayrollNumber(  this.statics().nextId() );
+	    this.self.instanceCount ++;
 	},
-
 	work : function(task) {
-		console.log(this.name + " is working on: " + task);
+		console.log(this.name + ' is working on: ' + task);
+	},
+	getTotalEmployees: function(){
+	       return this.statics().instanceCount;
 	}
-
-}, function() {
-	// console.log('BizDash.sample.Employee class defined..');
 });

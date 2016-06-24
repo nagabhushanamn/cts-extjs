@@ -34,11 +34,19 @@ Ext.define('BizDash.view.main.Main', {
         split: true,
         tbar: [{
             text: 'Button',
-            handler: 'onClickButton'
+            //handler: 'onClickButton'
         }]
     },{
         region: 'center',
         xtype: 'tabpanel',
+        listeners:{
+        	afterrender:function(component){
+        		console.log('Center tabpanel after rendered');
+        	},
+        	beforerender:function(component){
+        		console.log('Center tabpanel before rendered');
+        	}
+        },
         items:[{
             title: 'Tab 1',
             html: '<h3>Welcome to EXT-JS</h3>'

@@ -4,8 +4,8 @@
 
 Ext.define('BizDash.config.Config', {
 	extend : 'Ext.util.Observable',
-	requires : [ 'BizDash.config.Constants' ],
 	singleton : true,
+	requires : [ 'BizDash.config.Constants' ],
 	config : {
 		version : '0.0.1-0',
 		isPhone : false,
@@ -26,11 +26,16 @@ Ext.define('BizDash.config.Config', {
 		return newVersion;
 	},
 	updateVersion : function(newVersion, oldVersion) {
-		// this.fireEvent('versionChanged',newVersion,oldVersion);
+		// this.fireEvent('versionchanged', newVersion, oldVersion);
+	},
+	constructor : function(config) {
+		this.initConfig(config);
+		this.callParent([ config ]);
 	},
 	getBuildNumber : function() {
-		return this.version.split('-')[1];
+		var versionSplit = this.getVersion().split('-');
+		return versionSplit[1];
 	}
 }, function() {
-	console.log('BizDash.config.Config class defined');
+	//console.log('BizDash.config.Config class defined');
 });

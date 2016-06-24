@@ -2,8 +2,8 @@
  * http://usejsdoc.org/
  */
 
-Ext.define('BizDash.sample.tasks.attentClient', {
-	attentClient : function(clientName) {
-		console.log(this.name + " is attending the client: " + clientName);
+Ext.define('Myapp.sample.tasks.attendClient', {
+	attendClient : function(clientName) {
+		console.log(this.name + ' is attending client: ' + clientName);
 	}
 });

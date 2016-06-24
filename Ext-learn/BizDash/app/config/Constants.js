@@ -7,5 +7,5 @@ Ext.define('BizDash.config.Constants', {
 		ENVIRONMENT : 'dev'
 	}
 }, function() {
-	console.log('BizDash.config.Constants class defined');
+	//console.log('BizDash.config.Constants class defined');
 });

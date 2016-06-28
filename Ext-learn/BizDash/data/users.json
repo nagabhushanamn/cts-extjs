@@ -1,0 +1,38 @@
+	{
+		"success": true,
+		"results": 4,
+		"rows": [
+			{
+			    "userId"   : 1,
+				"Name"     : "John",
+				"Email"    : "john@gmail.com",
+				"TelNumber": "0330 122 2800",
+				"Role"     : "Administrator",
+				"Photo"    : "user.png"
+			},
+			{   
+			    "userId"   : 2,
+				"Name"     : "Sarah",
+				"Email"    : "sarah@hotmail.com",
+				"TelNumber": "0330 122 2800",
+				"Role"     : "Customer",
+				"Photo"    : "user.png"
+			},
+			{
+			    "userId"   : 3,
+				"Name"     : "Brian",
+				"Email"    : "brian@aol.com",
+				"TelNumber": "0330 122 2800",
+				"Role"     : "Supplier",
+				"Photo"    : "user.png"
+			},
+			{
+			    "userId"   : 4,
+				"Name"     : "Karen",
+				"Email"    : "karen@gmail.com",
+				"TelNumber": "0330 122 2800",
+				"Role"     : "Administrator",
+				"Photo"    : "user.png"
+			}
+		]
+	}

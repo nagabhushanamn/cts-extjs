@@ -1,10 +1,21 @@
+// sencha generate model User Name:string,Email:string,TelNumber:string,Role:string
 Ext.define('BizDash.model.User', {
-    extend: 'Ext.data.Model',
-    
+	//extend: 'BizDash.model.Base',
+	extend: 'Ext.data.Model',
+	idProperty:'userId',
+	hasMany: [
+		{
+			model: 'BizDash.model.Sale',
+			name: 'sales',
+			associationKey: 'sales'
+		}
+	],
+
     fields: [
         { name: 'Name', type: 'string' },
         { name: 'Email', type: 'string' },
-        { name: 'TelNumber', type: 'string' }
-
+        { name: 'TelNumber', type: 'string' },
+        { name: 'Role', type: 'string' },
+        { name: 'Photo', type: 'string' }
     ]
 });

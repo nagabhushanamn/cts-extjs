@@ -41,10 +41,10 @@ Ext.define('BizDash.view.main.Main', {
         xtype: 'tabpanel',
         listeners:{
         	afterrender:function(component){
-        		console.log('Center tabpanel after rendered');
+        		//console.log('Center tabpanel after rendered');
         	},
         	beforerender:function(component){
-        		console.log('Center tabpanel before rendered');
+        		//console.log('Center tabpanel before rendered');
         	}
         },
         items:[{

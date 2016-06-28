@@ -282,6 +282,18 @@
         "controllerNamespace": "BizDash.controller",
         "name": "Location"
       }
+    },
+    "app/model/Product.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "BizDash",
+        "baseClass": "Ext.data.Model",
+        "fields": "Name:string:null,Description:string:null,Quantity:int:null,Price:float:null",
+        "modelFileName": "Product",
+        "modelNamespace": "BizDash.model",
+        "name": "Product"
+      }
     }
   }
 }

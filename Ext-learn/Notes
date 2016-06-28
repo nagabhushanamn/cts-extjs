@@ -1,51 +1,43 @@
 
 
- ExtJS class
- -------------------
+
+ today's plan
+ -------------
  
-   --> pre-processor
-   
-       ["className",
-        "loader", 
-        "extend", 
-        "privates",
-        "statics", 
-        "inheritableStatics",
-        "platformConfig",
-        "config", 
-        "cachedConfig",
-        "mixins",
-        "alias"]
-   
-   --> post-processor
-   
-       ["alias",
-        "singleton",
-        "alternateClassName",
-        "debugHooks",
-        "deprecated", 
-        "uses"]
+  1. data package
+  
+      --> Model
+      --> Store : collection of model instances that allow these models to be manipulated
+      --> proxy  ( read , write )
+      
+         2 types of proxy
+         
+         1. client proxy
+         
+            --> memory
+            --> localStorage
+         
+         2. server proxy
+         
+            --> ajax
+            --> REST
+      
+      
+  2. UI-components
+  
+     component-lifecycle
+     
+        Init
+        Rendering
+        destroy
         
-        
---------------------------
-
-
-  1. How to handle Events
+     containers
+     
+     layouts
+     
+     -----------------------   
   
-  2. MVC / MVVM --> arch
   
-  3. data-model
-  
- -------------------------
-
-
-
-  MVVM 
-  
-    --> to address the drawbacks of maintainability and testing in MVC.
-    --> data-binding
-
-
 
 
 

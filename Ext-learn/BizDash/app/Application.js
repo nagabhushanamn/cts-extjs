@@ -14,9 +14,22 @@ Ext.define('BizDash.Application', {
     extend: 'Ext.app.Application',
     
     name: 'BizDash',
-    requires:['BizDash.config.Config'],
+    requires: [
+       		'BizDash.config.Config',
+       		'BizDash.model.Product',
+       		'BizDash.model.Sale',
+       		'BizDash.model.User',
+       		'BizDash.model.WebSiteVisitor'
+       	],
     stores: [
         // TODO: add global / shared stores here
+        'Users',
+		'Products',
+		'Navigation',
+		'users.Admins',
+		'users.Customers',
+		'users.Suppliers',
+		'WebSiteVisitors'
     ],
     
     launch: function () {

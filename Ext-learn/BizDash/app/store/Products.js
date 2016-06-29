@@ -3,7 +3,9 @@
  */
 	Ext.define('BizDash.store.Products', {
 		extend: 'Ext.data.Store',
+
 		model: 'BizDash.model.Product',
+
 		autoLoad: true,
 		proxy: {
 			type  : 'ajax',
@@ -13,4 +15,5 @@
 				rootProperty: 'rows'
 			}
 		}
+
 	});

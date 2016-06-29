@@ -1,0 +1,84 @@
+
+    	// 1. Initialization
+    	var panel=Ext.create('Ext.panel.Panel',{
+    		title:'Welcome',
+    		width:400,
+    		height:250,
+    		//renderTo:Ext.getBody()
+    		//html:'<h4> Welcome </h4>',
+    		//contentEl:"content",
+    		data:{comp:'CTS'},
+    		tpl:['Welcome {comp}'],
+    		listeners:{
+            	afterrender:function(component){
+            		console.log('panel after rendered');
+            	},
+            	beforerender:function(component){
+            		console.log('panel before-rendered');
+            		//return false;
+            	}
+            }
+    	});
+    	
+    	// 2. Rendering 
+    	panel.render(Ext.getBody());
+    	
+    	
+    	// Destruct
+    	setTimeout(function() {
+    		//panel.destroy();	
+    	},5000);
+    	
+    	
+    	
+    	//--------------------------------------------------
+    	
+    	
+    	// TODO - Launch the application
+    	
+    	//     var comp=Ext.create('BizDash.ui.CustomComponent',{width:400,height:400});
+    	//     comp.render(Ext.getBody());
+    	
+    	
+		//    	Ext.create('BizDash.ui.CustomContainer', {
+		//			items : [
+		//			         {xtype:'myComp',html:'child comp-1'},
+		//			         {xtype:'component',html:'child comp-2'}
+		//			         ],
+		//			renderTo : Ext.getBody()
+		//		});
+    	
+    	//-----------------------------------------
+    	
+    	
+    	Ext.onReady(function(){
+    		
+    		Ext.create('Ext.container.Viewport',{
+    			padding:'20px',
+    			layout:'auto',
+    			style:{
+    				'background-color':'#fc9',
+    				color:'#000'
+    			},
+    			html:'This is Application Area'
+    		});
+    		
+    		Ext.create('Ext.panel.Panel',{
+    			renderTo:Ext.getBody(),
+    			title:'My First Panel',
+    			width:300,
+    			height:200,
+    			html:'<b> Here</b> goes some <i>content</i>'
+    		});
+    		
+    		var win=Ext.create('Ext.window.Window',{
+    			title:'My First Window',
+    			width:300,
+    			height:200,
+    			maximizable:true,
+    			html:'This is my first Window'
+    		});
+    		win.show();
+    		
+    		
+    	});

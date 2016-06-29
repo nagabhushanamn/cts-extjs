@@ -19,7 +19,9 @@ Ext.define('BizDash.Application', {
        		'BizDash.model.Product',
        		'BizDash.model.Sale',
        		'BizDash.model.User',
-       		'BizDash.model.WebSiteVisitor'
+       		'BizDash.model.WebSiteVisitor',
+       		'BizDash.ui.CustomComponent',
+       		'BizDash.ui.CustomContainer'
        	],
     stores: [
         // TODO: add global / shared stores here
@@ -33,6 +35,28 @@ Ext.define('BizDash.Application', {
     ],
     
     launch: function () {
-        // TODO - Launch the application
+    	
+
+    	var win=Ext.create('Ext.window.Window', {
+			title : 'layout',
+			width : 500,
+			height : 300,
+			layout : 'anchor',
+			renderTo : Ext.getBody(),
+			defaults:{
+				xtype:'panel',
+				height:60
+			},
+			items : [
+			       {title:'Menu1',html:' panel at 100% - 10px',anchor:'-30'},
+			       {title:'Menu2',html:' panel at 70% of anchor',anchor:'70%'},
+			       {title:'Menu3',html:' panel at 50% width and 40% height of anchor',anchor:'50% 40%'},
+			]
+		});
+    	win.show();
+    	
+    	
+    	
+    	
     }
 });

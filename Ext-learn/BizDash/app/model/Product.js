@@ -1,7 +1,7 @@
 // sencha generate model Product Name:string,Description:string,Quantity:int,Price:float
 Ext.define('BizDash.model.Product', {
 	//extend: 'BizDash.model.Base',
-	 extend: 'Ext.data.Model',
+	extend: 'Ext.data.Model',
 
 	requires: [
 		'BizDash.model.Location',
@@ -9,6 +9,14 @@ Ext.define('BizDash.model.Product', {
 		'Ext.data.validator.Presence',
 		'Ext.data.validator.Length'
 	],
+
+	proxy: {
+		type  : 'ajax',
+		url   : 'data/product.json',
+		reader: {
+			type: 'json'
+		}
+	},
 
 	manyToMany: [
 		'Location'

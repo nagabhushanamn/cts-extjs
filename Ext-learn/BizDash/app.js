@@ -8,7 +8,7 @@ Ext.application({
 
     extend: 'BizDash.Application',
     
-    autoCreateViewport: 'BizDash.view.main.Main'
+    //autoCreateViewport: 'BizDash.view.main.Main'
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to BizDash.Application. If you need to

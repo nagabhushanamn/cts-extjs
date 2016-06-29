@@ -1,5 +1,4 @@
 // sencha generate model Location Name:string,Row:int,Shelf:int
-
 Ext.define('BizDash.model.Location', {
 	//extend: 'BizDash.model.Base',
 	extend: 'Ext.data.Model',

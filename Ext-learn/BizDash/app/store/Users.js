@@ -2,12 +2,25 @@
  * BizDash.store.Users
  */
 Ext.define('BizDash.store.Users', {
+
 	extend: 'Ext.data.Store',
+
 	model: 'BizDash.model.User',
+
+	/*proxy: {
+	 type: 'localstorage',
+	 id  : 'users'
+	 }*/
+
 	autoLoad: true,
+
 	proxy: {
+		//type  : 'rest',
+		//url   : 'users/index.php',
 		type: 'ajax',
-		url:'data/users.json',
+		api: {
+			read: 'data/users.json',
+		},
 		reader: {
 			type: 'json',
 			rootProperty: 'rows'
@@ -18,9 +31,11 @@ Ext.define('BizDash.store.Users', {
 			transform: {
 				fn: function (data, request) {
 					data.Email = data.Email.toLowerCase();
+
 					return data;
 				}
 			}
 		}
 	}
+
 });

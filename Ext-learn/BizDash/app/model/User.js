@@ -2,7 +2,15 @@
 Ext.define('BizDash.model.User', {
 	//extend: 'BizDash.model.Base',
 	extend: 'Ext.data.Model',
-	idProperty:'userId',
+
+//	proxy: {
+//		type: 'ajax',
+//		url: 'data/user.json',
+//		reader: {
+//			type: 'json'
+//		}
+//	},
+
 	hasMany: [
 		{
 			model: 'BizDash.model.Sale',

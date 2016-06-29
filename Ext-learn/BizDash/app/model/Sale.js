@@ -6,7 +6,15 @@
 		requires: [
 			'BizDash.model.Product'
 		],
-		
+
+		proxy: {
+			type  : 'ajax',
+			url   : 'data/sale.json',
+			reader: {
+				type: 'json'
+			}
+		},
+
 	    fields: [
 		    { name: 'productId', type: 'int', reference: 'Product' },
 		    { name: 'userId', type: 'int', reference: 'User' },

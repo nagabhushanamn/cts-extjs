@@ -1,0 +1,339 @@
+
+
+-----------------------------------------------------------------
+
+sencha --sdk /Users/nagabhushanamn/Downloads/Ext\ JS/ext-6.0.1/ generate workspace /Users/nagabhushanamn/Desktop/my-workspace/
+
+sencha --sdk /Users/nagabhushanamn/Downloads/Ext\ JS/ext-6.0.1 generate app --classic MyApp ./
+
+
+------------------------------------------------------------------
+
+Exploring Sencha Cmd commands
+
+sencha [category] [command] [options...] [arguments...]
+
+
+sencha help 
+sencha help app 
+sencha help app clean
+
+
+sencha upgrade --check
+sencha upgrade
+
+
+sencha -sdk /path/to/sdk generate app [--modern/classic] MyApp /path/to/myapp
+
+
+Building the application
+
+	sencha app build
+	sencha app build modern
+	sencha app build classic
+
+
+Launching the application
+	
+	sencha app watch
+	sencha app watch modern
+	sencha app watch classic
+
+The code generation
+
+	sencha generate view myApp.MyView
+	sencha generate model MyModel id:int,fname,lname
+	sencha generate controller MyController
+	
+	
+Upgrading your application
+
+	sencha app upgrade [ path-to-new-framework ]
+
+
+
+Debugging an Ext JS application
+
+	1.Illumination
+	2.App Inspector
+	
+---------------------------------------------------------------	
+
+
+The class system
+-----------------
+
+• Ext
+• Ext.Base
+• Ext.Class
+• Ext.ClassManager
+• Ext.Loader
+
+---------------------------------------------------------------
+
+Ext
+
+---------------------------------------------------------------
+
+a.application
+
+  Ext.application({
+     name: 'MyApp',
+     extend:'MyApp.Application',
+     launch: function() {
+     }
+});
+
+---------------------------------------------------------------
+
+b.define
+
+Ext.define(name,data, callback)
+
+---------------------------------------------------------------
+
+c.create
+
+Ext.create(Class,Options);
+
+
+---------------------------------------------------------------
+
+d. onReady
+
+Ext.onReady(function(){
+     new Ext.Component({
+       renderTo: document.body,
+       html: 'DOM ready!'
+     });
+});
+
+---------------------------------------------------------------
+
+e.widget
+
+ Ext.widget('panel', {
+       renderTo: Ext.getBody(),
+       title: 'Panel'
+});
+
+---------------------------------------------------------------
+
+f.getClass
+
+var button = new Ext.Button();
+Ext.getClass(button);  // returns Ext.Button
+
+
+---------------------------------------------------------------
+
+g.getClassName
+
+ Ext.getClassName(Ext.Button); //returns "Ext.Button"
+ 
+---------------------------------------------------------------
+
+
+Ext.Loader:
+
+
+ ->dynamic dependency loading 
+
+
+  Ext.require(['widget.window', 
+               'layout.border',
+               'Ext.data.Connection']);
+
+
+  Ext.require(['widget.*', 'layout.*', 'Ext.data.*');
+
+  Ext.exclude('Ext.data.*').require('*');
+  
+  
+---------------------------------------------------------------
+
+Events:
+
+
+ a. Adding listeners
+ 
+ 	
+		Ext.create('Ext.Button', {
+		     renderTo: Ext.getBody(),
+		     listeners: {
+		       click: function() {
+		         Ext.Msg.alert('Button clicked!');
+		     } 
+		     }
+		});
+		
+		
+		
+		Ext.create('Ext.Button', {
+		     renderTo: Ext.getBody(),
+		     listeners: {
+		       mouseout: function() {
+		         //Do something
+		       },
+		       click: function() {
+		         // Do something
+		       }
+		} });
+		
+		
+		
+		var button = Ext.create('Ext.Button');
+	    button.on('click', function() {
+	       //Do something
+	    });
+	    
+	    
+	    
+	    
+	    var button = Ext.create('Ext.Button');
+		button.on({
+		     mouseover: function() {
+		       //Do something
+		     },
+		     mouseover: function() {
+		       //Do something
+		} });
+		
+		
+		
+		
+		
+	   var HandleClick= function() {
+	     Ext.Msg.alert('My button clicked!');
+	 	}
+	   
+	   Ext.create('Ext.Button', {
+		  listeners: {
+		  click: HandleClick
+	     }
+	    });
+		
+	    button.un('click', HandleClick);
+
+	
+---------------------------------------------------------------
+	
+
+The DOM node event handling
+
+		<div id="mydiv"></div>
+		var div = Ext.get('mydiv');
+		div.on('click', function(e, t, eOpts) {
+		    // Do something
+		});
+
+---------------------------------------------------------------
+
+Accessing DOM
+
+	Ext.get:
+	
+	var mydiv = Ext.get('myDivId');
+  
+    ---------------------------------------------------------------
+
+	Ext.query
+
+	var someNodes = Ext.query('.oddRow',myCustomComponent.getEl().dom);
+	
+	---------------------------------------------------------------
+
+	Ext.select
+
+	var rows = Ext.select('div.row'); ////Matches all divs with class row
+	rows.setWidth(100); // All elements become 100 width
+	or
+	Ext.select('div.row').setWidth(100);
+
+    ---------------------------------------------------------------
+    
+    Multiple selections
+    
+    Ext.select('div.row, span.title'); 
+
+	---------------------------------------------------------------
+
+	Selection root
+	
+	 Ext.get('myEl').select('div.row');
+	 or
+	 Ext.select('div.row', true, 'myEl');
+	
+	---------------------------------------------------------------
+	
+	Ext.ComponentQuery:
+	
+	
+	query will return all the components with the xtype button:
+	
+		Ext.ComponentQuery.query('button');
+		
+	
+	Ext.ComponentQuery.query('#foo');
+	
+	Ext.ComponentQuery.query("button[title='my button']");
+	or
+	parent.query('textfield[title=my button]')
+	
+	
+	Ext.ComponentQuery.query('formpanel numberfield'); // Gets only the numberfields under a form
+
+	parent.child('button[itemId=save]');
+
+--------------------------------------------------------------------------------------------------
+
+
+Components:
+	
+	refer : KitchenSink examples
+	
+	
+	 class: Ext.Component
+	
+	"which provides supports to create, resize, render, and dispose the components"
+
+
+	"All the components have a property called xtype.
+	 This is very useful when you don't want to instantiate the component immediately,
+	 but you want to lazy load it.
+
+	
+----------------------------------------------------------------------------------------------------
+
+
+Containers:
+	
+	
+	Containers are a special type of component that are capable of holding other components. 
+	Ext.container.Container is the base class of all the containers in Ext JS.
+	
+	
+----------------------------------------------------------------------------------------------------
+
+
+Layouts:	
+	
+	
+	-> A layout defines how the contained components are positioned and sized.
+	-> Every container has a layout. The default layout is auto.
+	-> This doesn't specify any rules to position and size the child components.
+	
+	
+-----------------------------------------------------------------------------------------------------	
+	
+	
+	
+	e.g  Customer-Feedback Form
+	
+	
+	
+	
+	
+	
+	
+	

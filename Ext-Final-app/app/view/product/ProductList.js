@@ -5,9 +5,25 @@
 Ext.define('App.view.product.ProductList', {
 
 	extend : 'Ext.grid.Panel',
+	
 	xtype:'products',
 	
-	store:'Products',
+	 requires: [
+	            'Ext.grid.Panel',
+	            'Ext.grid.column.Template',
+	            'Ext.grid.column.Widget',
+	            'Ext.button.Button',
+	            'App.store.Products',
+	            'App.view.product.ProductListController',
+	            'App.view.product.form.ProductForm',
+	            'App.view.product.form.ProductFormModel',
+	            'App.view.product.form.ProductFormController'
+	            ],
+	
+	//store:'Products',
+	store:{
+		type:'products'
+	},
 	
 	controller:'ProductList',
 	

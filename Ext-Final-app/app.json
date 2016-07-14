@@ -12,7 +12,9 @@
     "toolkit": "classic",
     "theme": "theme-triton",
     "requires": [
-        "font-awesome"
+        "charts",
+        "font-awesome",
+        "ux"
     ],
     "fashion": {
         "inliner": {

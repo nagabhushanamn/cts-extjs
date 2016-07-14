@@ -2,13 +2,18 @@
  * http://usejsdoc.org/
  */
 
-Ext.define('App.view.product.ProductForm', {
+Ext.define('App.view.product.form.ProductForm', {
 	extend : 'Ext.form.Panel',
 	xtype:'product-form',
 	
 	requires:[
-	          'App.view.product.ProductFormController',
-	          'App.view.main.ProductFormModel'
+	          'App.view.product.form.ProductFormController',
+	          'App.view.product.form.ProductFormModel',
+	          'Ext.form.field.Text',
+	          'Ext.form.field.Number',
+	          'Ext.form.field.TextArea',
+	          'Ext.form.field.Number',
+	          'Ext.button.Button'
 	          ],
 	
 	controller:'productForm', 

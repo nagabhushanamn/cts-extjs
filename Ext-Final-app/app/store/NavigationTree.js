@@ -7,10 +7,12 @@ Ext.define('App.store.NavigationTree', {
 
     storeId: 'NavigationTree',
 
+    // Model
     fields: [{
         name: 'text'
     }],
 
+    // data
     root: {
         expanded: true,
         children: [
@@ -70,6 +72,12 @@ Ext.define('App.store.NavigationTree', {
                 routeId: 'feedback',
                 leaf: true
             },
+            {
+                text: 'Charts',
+                iconCls: 'x-fa fa-pie-chart',
+                viewType: 'charts',
+                leaf: true
+            }
         ]
     }
 });

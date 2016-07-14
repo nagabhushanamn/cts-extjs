@@ -8,6 +8,12 @@
             "coverageFilters": [],
             "directory": "WindowEditor",
             "name": "WindowEditor"
+        },
+        {
+            "libs": [],
+            "coverageFilters": [],
+            "directory": "EmailEditor",
+            "name": "EmailEditor"
         }
     ]
 }

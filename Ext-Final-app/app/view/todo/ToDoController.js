@@ -36,7 +36,7 @@ Ext.define('App.view.todo.ToDoController', {
             store.sync({
                 success: function (batch, options) {
                     this.lookupReference('newToDo').setValue('');
-                    this.addToDoToView(options.operations.create[0]);
+                    //this.addToDoToView(options.operations.create[0]);
                 },
                 scope: this
             });

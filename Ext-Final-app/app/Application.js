@@ -13,7 +13,7 @@ Ext.define('App.Application', {
     stores: [
         // TODO: add global / shared stores here
         'NavigationTree',
-        'Products'
+        //'Products'
     ],
     
     launch: function () {

@@ -1,11 +1,11 @@
 /**
  * BizDash.model.field.Money
  */
-Ext.define('BizDash.model.field.Money', {
+Ext.define('App.model.field.Money', {
 
 	extend : 'Ext.data.field.Number',
 
-	requires : [ 'Ext.data.validator.Range' ],
+	requires : [ 'Ext.data.validator.Range','Ext.data.field.Number' ],
 
 	alias : 'data.field.money',
 

@@ -2,6 +2,10 @@ Ext.define('App.view.main.MainController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.main',
 
+    requires: [
+               'App.view.product.ProductList'
+               ],
+    
     listen : {
         controller : {
             '#' : {
@@ -10,8 +14,9 @@ Ext.define('App.view.main.MainController', {
         }
     },
 
+   // /#users  | /#products
     routes: {
-        ':node': 'onRouteChange'
+        ':id': 'onRouteChange'
     },
 
 
@@ -23,7 +28,8 @@ Ext.define('App.view.main.MainController', {
     lastView: null,
 
     setCurrentView: function(hashTag) {
-        hashTag = (hashTag || '').toLowerCase();
+        
+    	hashTag = (hashTag || '').toLowerCase();
 
         var me = this,
             refs = me.getReferences(),
@@ -31,8 +37,9 @@ Ext.define('App.view.main.MainController', {
             mainLayout = mainCard.getLayout(),
             navigationList = refs.navigationTreeList,
             store = navigationList.getStore(),
-            node = store.findNode('routeId', hashTag) ||
-                   store.findNode('viewType', hashTag),
+            
+            node = store.findNode('routeId', hashTag) || store.findNode('viewType', hashTag),
+                   
             view = (node && node.get('viewType')) || 'page404',
             lastView = me.lastView,
             existingItem = mainCard.child('component[routeId=' + hashTag + ']'),
@@ -40,7 +47,7 @@ Ext.define('App.view.main.MainController', {
 
         // Kill any previously routed window
         if (lastView && lastView.isWindow) {
-            lastView.destroy();
+            lastView.destroy();  // destruction-phase
         }
 
         lastView = mainLayout.getActiveItem();
@@ -49,7 +56,7 @@ Ext.define('App.view.main.MainController', {
         
         if (!existingItem) {
             newView = Ext.create({
-                xtype: view,
+                xtype: view,  //e.g  route=home , view='pageblank'
                 routeId: hashTag,  // for existingItem search later
                 hideMode: 'offsets'
             });
@@ -88,7 +95,7 @@ Ext.define('App.view.main.MainController', {
         var to = node && (node.get('routeId') || node.get('viewType'));
 
         if (to) {
-            this.redirectTo(to);
+            this.redirectTo(to);  // if to=users , url = /#users
         }
     },
 
@@ -103,7 +110,7 @@ Ext.define('App.view.main.MainController', {
     
 	onItemSelected : function(sender, record) {
 		//Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-		    Ext.create('MyApp.view.main.WindowEditor');
+	     Ext.create('MyApp.view.main.EmailEditor');
 	},
 
 	onConfirm : function(choice) {

@@ -7,6 +7,6 @@ Ext.define('App.model.Base', {
 	} ],
 
 	schema : {
-		namespace : 'BizDash.model'
+		namespace : 'App.model'
 	}
 });

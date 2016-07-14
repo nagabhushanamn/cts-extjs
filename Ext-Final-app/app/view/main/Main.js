@@ -2,8 +2,11 @@ Ext.define('App.view.main.Main', {
     extend: 'Ext.container.Viewport',
 
     requires: [
-        'Ext.button.Segmented',
-        'Ext.list.Tree'
+        'Ext.list.Tree',
+        'Ext.container.*',
+        'Ext.toolbar.Toolbar',
+        'Ext.Component',
+        'Ext.toolbar.TextItem'
     ],
 
     controller: 'main',

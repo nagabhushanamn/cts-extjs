@@ -9,7 +9,8 @@ Ext.application({
     extend: 'App.Application',
 
     requires: [
-        'App.view.main.Main'
+        'App.*',
+        //'Ext.*'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
@@ -29,7 +30,5 @@ Ext.application({
     // have specific requirements on each other, you may need to still require them
     // explicitly.
     //
-    requires: [
-        'App.*'
-    ]
+    
 });

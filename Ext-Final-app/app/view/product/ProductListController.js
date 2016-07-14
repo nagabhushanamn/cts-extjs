@@ -1,11 +1,16 @@
-Ext.define('App.view.product.ProductGridController', {
+Ext.define('App.view.product.ProductListController', {
 	extend : 'Ext.app.ViewController',
 
+	requires:[
+	          'Ext.app.ViewController',
+	          'App.view.product.form.ProductForm'
+	          ],
+	
 	alias : 'controller.ProductList',
 
 	onEditClick : function(btn) {
 		var rec = btn.getWidgetRecord();
-		var productForm = Ext.create('App.view.product.ProductForm', {
+		var productForm = Ext.create('App.view.product.form.ProductForm', {
 			floating : true,
 			modal : true,
 			closable : true,

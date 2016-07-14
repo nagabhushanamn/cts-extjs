@@ -1,13 +1,16 @@
 // sencha generate model Product Name:string,Description:string,Quantity:int,Price:float
 
 Ext.define('App.model.Product', {
-	//extend: 'BizDash.model.Base',
+	//extend: 'App.model.Base',
 	extend: 'Ext.data.Model',
 
 	requires: [
-		'BizDash.model.field.Money',
+		'App.model.field.Money',
 		'Ext.data.validator.Presence',
-		'Ext.data.validator.Length'
+		'Ext.data.validator.Length',
+		'Ext.data.field.String',
+		'Ext.data.field.Number',
+		'Ext.data.field.String',
 	],
 
 	fields: [
@@ -29,11 +32,6 @@ Ext.define('App.model.Product', {
 			calculate: function(data) {
 				return data.Quantity * data.Price;
 			}
-		},
-		{
-			name: 'HistoricSales',
-			type: 'auto',
-			defaultValue: [4, 9, 12, 66, 9]
 		}
 	],
 

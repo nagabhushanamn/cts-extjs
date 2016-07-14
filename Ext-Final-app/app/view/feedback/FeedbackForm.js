@@ -8,6 +8,16 @@ Ext.define('App.view.customer.FeedbackForm', {
 	alias : 'widget.feedback',
 	scrollable : true,
 
+	requires:[
+	          'Ext.form.FieldContainer',
+	          'Ext.form.field.Date',
+	          'Ext.form.field.Text',
+	          'Ext.form.field.Number',
+	          'Ext.form.RadioGroup',
+	          'Ext.form.CheckboxGroup',
+	          'Ext.form.field.TextArea',
+	          ],
+	
 	margin : 20,
 
 	items : [

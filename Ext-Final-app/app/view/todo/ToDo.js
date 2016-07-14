@@ -5,13 +5,8 @@
 Ext.define('App.view.todo.ToDo', {
 	extend : 'Ext.grid.Panel',
 
-	xtype : 'app-todo',
-	controller : 'todo',
-
-	viewModel : {
-		type : 'todo'
-	},
-
+	xtype : 'app-todo-grid',
+	
 	padding : '20px',
 
 	bind : {
